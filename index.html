@@ -1114,6 +1114,13 @@ textarea.f-inp{resize:vertical;min-height:94px}
   /* ── Nav scroll ── */
   var nav = document.getElementById('nav');
   var bar = document.getElementById('progress');
+  var sectionMap = [
+    {id:'top',    idx:0},
+    {id:'seminar',idx:1},
+    {id:'therapie',idx:3},
+    {id:'tipps',  idx:4},
+  ];
+  var bnItems = document.querySelectorAll('.bn');
 
   function onScroll(){
     var sy = window.scrollY;
@@ -1191,13 +1198,6 @@ textarea.f-inp{resize:vertical;min-height:94px}
   setInterval(tick, 1000);
 
   /* ── Bottom nav active ── */
-  var sectionMap = [
-    {id:'top',   idx:0},
-    {id:'seminar',idx:1},
-    {id:'therapie',idx:3},
-    {id:'tipps', idx:4},
-  ];
-  var bnItems = document.querySelectorAll('.bn');
   function updateBNav(){
     var sy = window.scrollY + window.innerHeight/2;
     var active = 0;
