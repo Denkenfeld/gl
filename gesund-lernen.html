@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="Svenja Lehmann – Resilienz-Wochenendseminar für Lehrkräfte im Schwarzwald. Lerntherapie für Kinder & Jugendliche. Foodtruck Lehmanns Grill & Grün. Jetzt informieren.">
+<meta property="og:title" content="Gesund·Lernen | Svenja Lehmann – Resilienz für Lehrkräfte">
+<meta property="og:description" content="Wochenendseminar „Stark verwurzelt – kraftvoll wachsen" · Schwarzwald · 369 € inkl. Vollverpflegung">
+<meta property="og:type" content="website">
+<title>Gesund·Lernen – Svenja Lehmann | Resilienz für Lehrkräfte</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TOKENS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+:root {
+  --forest:  #1C3D2A;
+  --sage:    #3F7254;
+  --mist:    #8BB89A;
+  --dew:     #EAF3EC;
+  --dewMid:  #D4E9D9;
+  --ember:   #C8614A;
+  --emberSoft: #F2C4B8;
+  --linen:   #FAF7F1;
+  --white:   #FFFFFF;
+  --ink:     #172818;
+  --inkMid:  #3D5B44;
+  --inkSoft: #7A9C82;
+  --inkGhost:#B0CAB7;
+  --amber:   #E8A830;
+
+  --sh-xs: 0 1px 5px rgba(23,40,24,.06);
+  --sh-sm: 0 3px 14px rgba(23,40,24,.08);
+  --sh-md: 0 10px 32px rgba(23,40,24,.10);
+  --sh-lg: 0 28px 64px rgba(23,40,24,.12);
+
+  --r-s:  10px;
+  --r-m:  18px;
+  --r-l:  28px;
+  --r-xl: 40px;
+  --r-f:  9999px;
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+  --ease:  cubic-bezier(.4,0,.2,1);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--sans);background:var(--linen);color:var(--ink);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img,video{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LAYOUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:0 22px}
+@media(min-width:768px){.wrap{max-width:760px;padding:0 40px}}
+@media(min-width:1080px){.wrap{max-width:1160px;padding:0 64px}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SCROLL PROGRESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#progress{position:fixed;top:0;left:0;height:2px;
+  background:linear-gradient(90deg,var(--sage),var(--mist));z-index:999;pointer-events:none}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NAVIGATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 22px;
+  display:flex;align-items:center;justify-content:space-between;transition:all .3s var(--ease)}
+.nav.solid{background:rgba(250,247,241,.93);backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);padding:12px 22px;
+  box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.nav-logo{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:#fff;
+  letter-spacing:-.01em;transition:color .3s var(--ease)}
+.nav-logo sup{font-size:.55rem;vertical-align:super;opacity:.7;font-weight:400;font-style:italic}
+.nav.solid .nav-logo{color:var(--ink)}
+.nav-right{display:flex;gap:8px;align-items:center}
+.npill{font-size:.78rem;font-weight:500;padding:7px 16px;border-radius:var(--r-f);
+  color:rgba(255,255,255,.85);background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.22);transition:all .25s var(--ease)}
+.nav.solid .npill{color:var(--sage);background:var(--dew);border-color:transparent}
+.npill-cta{background:var(--ember)!important;border-color:transparent!important;
+  color:#fff!important;font-weight:600}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.hero{min-height:100svh;position:relative;display:flex;
+  flex-direction:column;justify-content:flex-end;overflow:hidden}
+
+/* Layered forest bg – replace with real photo using background-image:url(...) */
+.hero-bg{position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom, rgba(18,36,24,0) 30%, rgba(14,28,18,.92) 100%),
+    radial-gradient(ellipse 75% 55% at 55% 18%, rgba(63,114,84,.4) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 45% at 15% 75%, rgba(28,61,42,.35) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 88% 62%, rgba(200,97,74,.1) 0%, transparent 50%),
+    linear-gradient(150deg,#0e1e14 0%,#162d1e 28%,#1c3d2a 55%,#2d5a3d 78%,#3f7254 100%);
+  animation:bgBreathe 12s ease-in-out infinite alternate}
+@keyframes bgBreathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+/* Remove animation and keep static if preferred */
+
+.hero-hint{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);
+  color:rgba(255,255,255,.06);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  text-align:center;pointer-events:none;white-space:nowrap;z-index:1}
+
+.hero-stats{position:absolute;top:76px;right:18px;z-index:3;
+  display:flex;flex-direction:column;gap:7px}
+.hstat{background:rgba(255,255,255,.1);backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.18);border-radius:var(--r-m);
+  padding:9px 13px;text-align:center;min-width:72px}
+.hstat-n{font-size:1.15rem;font-weight:700;color:#fff;line-height:1}
+.hstat-l{font-size:.58rem;color:rgba(255,255,255,.52);margin-top:3px;line-height:1.3}
+
+.hero-body{position:relative;z-index:2;padding:0 22px 72px}
+@media(min-width:768px){.hero-body{padding:0 48px 100px;max-width:660px}}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;
+  background:rgba(255,255,255,.1);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.22);border-radius:var(--r-f);
+  font-size:.75rem;font-weight:500;color:rgba(255,255,255,.85);
+  margin-bottom:20px;letter-spacing:.02em}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#5dfb82;
+  animation:dotPulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.5)}}
+
+.hero h1{font-family:var(--serif);
+  font-size:clamp(2.6rem,10vw,5rem);font-weight:700;color:#fff;
+  line-height:1.06;letter-spacing:-.03em;margin-bottom:18px}
+.hero h1 em{font-style:italic;font-weight:600;color:rgba(255,255,255,.6)}
+.hero-sub{font-size:.98rem;color:rgba(255,255,255,.68);line-height:1.7;
+  max-width:320px;margin-bottom:30px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+.hero-scroll{position:absolute;bottom:24px;left:50%;
+  transform:translateX(-50%);z-index:2;
+  color:rgba(255,255,255,.38);display:flex;flex-direction:column;align-items:center;
+  gap:4px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  animation:scrollBob 2.5s ease-in-out infinite}
+@keyframes scrollBob{0%,100%{transform:translateX(-50%) translateY(0);opacity:.38}
+  50%{transform:translateX(-50%) translateY(7px);opacity:.65}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BUTTONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 24px;border-radius:var(--r-f);font-size:.88rem;font-weight:600;
+  border:none;cursor:pointer;transition:all .25s var(--ease);white-space:nowrap}
+.btn:active{transform:scale(.97)!important}
+
+.btn-ember{background:var(--ember);color:#fff;
+  box-shadow:0 4px 20px rgba(200,97,74,.35)}
+.btn-ember:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,97,74,.45)}
+
+.btn-ghost-l{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);
+  border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(8px)}
+.btn-ghost-l:hover{background:rgba(255,255,255,.18)}
+
+.btn-sage{background:linear-gradient(135deg,var(--sage),var(--forest));color:#fff;
+  box-shadow:0 4px 18px rgba(63,114,84,.3)}
+.btn-sage:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(63,114,84,.4)}
+
+.btn-ember-full{background:linear-gradient(135deg,var(--ember),#a84c37);color:#fff;
+  box-shadow:0 4px 18px rgba(200,97,74,.3);width:100%}
+.btn-ember-full:hover{transform:translateY(-2px)}
+
+.btn-green{background:linear-gradient(135deg,#52e87a,#2db850);color:#0d2e18;
+  font-weight:700;box-shadow:0 4px 22px rgba(82,232,122,.3);width:100%}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(82,232,122,.4)}
+
+.btn-amber{background:linear-gradient(135deg,#f0c040,#e08e18);color:#2d1800;
+  box-shadow:0 4px 18px rgba(224,160,40,.3)}
+.btn-amber:hover{transform:translateY(-2px)}
+
+.btn-sage-full{background:linear-gradient(135deg,var(--sage),var(--forest));color:#fff;
+  box-shadow:0 4px 18px rgba(63,114,84,.3);width:100%}
+.btn-sage-full:hover{transform:translateY(-2px)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SECTION CHROME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:96px 0}}
+
+.eyebrow{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mist);margin-bottom:10px}
+.eyebrow-ember{color:var(--ember)}
+
+h2.sec-title{font-family:var(--serif);font-size:clamp(1.9rem,6.5vw,3.2rem);
+  font-weight:700;line-height:1.12;letter-spacing:-.025em;color:var(--ink);margin-bottom:16px}
+h2.sec-title em{font-style:italic;color:var(--sage)}
+h2.sec-title-light{color:#fff}
+h2.sec-title-light em{color:rgba(255,255,255,.55)}
+
+.sec-lead{font-size:.96rem;line-height:1.75;color:var(--inkMid);max-width:380px}
+
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--dewMid),transparent)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ABOUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.about-sec{background:var(--white)}
+
+.about-card{background:var(--dew);border-radius:var(--r-l);padding:28px;margin-top:28px}
+
+.about-avi{width:88px;height:88px;border-radius:50%;
+  background:linear-gradient(135deg,var(--mist),var(--sage));
+  border:4px solid var(--white);box-shadow:var(--sh-md);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;font-size:2.4rem;
+  margin-bottom:18px;flex-shrink:0}
+/* Replace with: <img src="svenja.jpg" alt="Svenja Lehmann"> */
+
+.about-name{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.about-role{font-size:.75rem;color:var(--sage);font-weight:600;letter-spacing:.04em;margin-bottom:18px}
+
+.about-quote{font-family:var(--serif);font-style:italic;font-size:1.05rem;
+  color:var(--inkMid);line-height:1.6;padding-left:14px;
+  border-left:3px solid var(--mist);margin-bottom:18px}
+
+.about-text{font-size:.87rem;color:var(--inkMid);line-height:1.78;margin-bottom:20px}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:var(--white);border-radius:var(--r-f);padding:5px 12px;
+  font-size:.72rem;font-weight:500;color:var(--forest);box-shadow:var(--sh-xs)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SEMINAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.seminar-sec{background:var(--linen);padding-bottom:0}
+
+/* The ticket card */
+.ticket{background:linear-gradient(162deg,#0e2018 0%,#152c1e 35%,#1c3d2a 65%,#24472f 100%);
+  border-radius:var(--r-l) var(--r-l) 0 0;overflow:hidden;margin-top:28px}
+@media(min-width:768px){.ticket{border-radius:var(--r-l)}}
+
+.ticket-img{width:100%;height:196px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1a3828 0%,#2a5a3a 40%,#3c7550 70%,#5a9a6a 100%);
+  display:flex;align-items:center;justify-content:center}
+.ticket-img::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 50% at 50% 60%,rgba(90,200,120,.12) 0%,transparent 70%)}
+.ticket-img-hint{position:relative;color:rgba(255,255,255,.12);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;
+  padding:0 20px;line-height:1.8}
+
+.ticket-body{padding:26px}
+
+.ticket-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tbadge{display:inline-block;padding:4px 11px;border-radius:var(--r-f);
+  font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.tbadge-g{background:rgba(90,220,120,.12);border:1px solid rgba(90,220,120,.28);color:#6de893}
+.tbadge-e{background:rgba(200,97,74,.12);border:1px solid rgba(200,97,74,.28);color:var(--emberSoft)}
+
+.ticket-title{font-family:var(--serif);font-size:1.65rem;color:#fff;
+  line-height:1.22;margin-bottom:6px}
+.ticket-title em{font-style:italic;opacity:.6}
+.ticket-sub{font-size:.8rem;color:rgba(255,255,255,.48);margin-bottom:22px}
+
+.mpills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+.mpill{display:flex;align-items:center;gap:6px;padding:7px 13px;
+  background:rgba(255,255,255,.07);border-radius:var(--r-f);
+  font-size:.76rem;color:rgba(255,255,255,.8)}
+.mpill svg{width:13px;height:13px;flex-shrink:0;opacity:.65}
+
+/* Countdown */
+.cdown{background:rgba(255,255,255,.05);border-radius:var(--r-m);padding:16px;margin-bottom:20px}
+.cdown-eye{font-size:.63rem;color:rgba(255,255,255,.4);
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.cdown-row{display:flex;align-items:flex-end;gap:8px}
+.cdown-unit{text-align:center}
+.cdown-num{font-size:1.7rem;font-weight:700;color:#fff;line-height:1;display:block}
+.cdown-lbl{font-size:.56rem;color:rgba(255,255,255,.38);margin-top:3px;display:block}
+.cdown-sep{font-size:1.5rem;color:rgba(255,255,255,.22);line-height:1.1}
+
+/* Price */
+.price-box{background:rgba(255,255,255,.06);border-radius:var(--r-m);padding:18px;margin-bottom:18px}
+.price-eye{font-size:.62rem;color:rgba(255,255,255,.38);
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.price-main{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:#fff;line-height:1}
+.price-incl{font-size:.74rem;color:rgba(255,255,255,.48);margin-top:5px;line-height:1.5}
+.price-early{display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+  font-size:.78rem;color:#6de893;
+  background:rgba(90,220,120,.1);padding:5px 10px;border-radius:var(--r-f)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BENEFITS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ben-sec{background:var(--white)}
+.ben-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:30px}
+@media(min-width:768px){.ben-grid{grid-template-columns:repeat(4,1fr)}.ben-wide{grid-column:span 2!important}}
+.ben-wide{grid-column:span 2}
+.bc{background:var(--dew);border-radius:var(--r-m);padding:20px;transition:all .3s var(--ease)}
+.bc:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+.bc-icon{font-size:1.7rem;margin-bottom:11px}
+.bc-t{font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+.bc-d{font-size:.76rem;color:var(--inkSoft);line-height:1.6}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PROGRAM ACCORDION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.prog-sec{background:var(--linen)}
+.acc{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.ai{background:var(--white);border-radius:var(--r-m);overflow:hidden;
+  border:1.5px solid rgba(63,114,84,.08);transition:border-color .25s}
+.ai.open{border-color:rgba(63,114,84,.22)}
+.ah{display:flex;align-items:center;gap:14px;padding:17px 20px;cursor:pointer;
+  user-select:none;-webkit-user-select:none}
+.ai-day{width:38px;height:38px;border-radius:50%;background:var(--dew);
+  color:var(--forest);font-size:.68rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:all .3s var(--ease)}
+.ai.open .ai-day{background:var(--sage);color:#fff}
+.ai-label{flex:1;font-size:.88rem;font-weight:600;color:var(--ink)}
+.ai-tog{width:26px;height:26px;border-radius:50%;background:var(--dew);color:var(--sage);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;pointer-events:none;
+  transition:all .3s var(--ease)}
+.ai.open .ai-tog{background:var(--sage);color:#fff;transform:rotate(45deg)}
+.ab{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.ai.open .ab{max-height:450px}
+.ac{padding:4px 20px 22px 72px;display:flex;flex-direction:column;gap:9px}
+.ae{font-size:.84rem;color:var(--inkMid);line-height:1.6;
+  display:flex;gap:9px;align-items:flex-start}
+.ae::before{content:'🌿';font-size:.72rem;flex-shrink:0;margin-top:3px}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TESTIMONIALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.testi-sec{background:var(--dew)}
+.testi-row{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+@media(min-width:768px){.testi-row{flex-direction:row}.tc{flex:1}}
+.tc{background:var(--white);border-radius:var(--r-l);padding:24px;box-shadow:var(--sh-sm)}
+.tc-stars{color:#f4a733;font-size:.86rem;letter-spacing:1px;margin-bottom:14px}
+.tc-body{font-family:var(--serif);font-style:italic;font-size:.98rem;
+  color:var(--ink);line-height:1.65;margin-bottom:18px}
+.tc-author{display:flex;align-items:center;gap:10px}
+.tc-avi{width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--mist),var(--sage));
+  color:#fff;font-size:.82rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tc-name{font-size:.82rem;font-weight:600}
+.tc-role{font-size:.72rem;color:var(--inkSoft)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   THERAPY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.therapy-sec{background:linear-gradient(158deg,#fdf5f0 0%,#fae8dd 100%)}
+.therapy-card{background:var(--white);border-radius:var(--r-l);overflow:hidden;
+  box-shadow:var(--sh-sm);margin-top:28px}
+.therapy-head{background:linear-gradient(135deg,#f5e8de,#fdf0e8);
+  padding:24px;display:flex;gap:14px;align-items:flex-start}
+.th-circle{width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--emberSoft),var(--ember));
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;
+  box-shadow:0 4px 14px rgba(200,97,74,.3)}
+.th-eye{font-size:.68rem;font-weight:700;color:var(--ember);
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.th-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--ink)}
+.therapy-body{padding:24px}
+.t-intro{font-size:.87rem;color:var(--inkMid);line-height:1.78;margin-bottom:18px}
+.syms{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.sym{display:flex;gap:10px;align-items:center}
+.sym-dot{width:8px;height:8px;border-radius:50%;background:var(--ember);flex-shrink:0}
+.sym-t{font-size:.84rem;color:var(--inkMid)}
+.t-parent{background:linear-gradient(135deg,#fdf5f0,#faeadf);
+  border-radius:var(--r-m);padding:17px;margin-bottom:20px}
+.t-parent-eye{font-size:.68rem;font-weight:700;color:var(--ember);
+  text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.t-parent-txt{font-size:.82rem;color:var(--inkMid);line-height:1.65}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LEAD MAGNET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.lm-sec{background:linear-gradient(158deg,var(--forest) 0%,#1a3528 50%,#213b2d 100%);
+  position:relative;overflow:hidden}
+.lm-d1{position:absolute;top:-90px;right:-90px;width:280px;height:280px;
+  border-radius:50%;background:rgba(90,220,120,.06);pointer-events:none}
+.lm-d2{position:absolute;bottom:-70px;left:-70px;width:220px;height:220px;
+  border-radius:50%;background:rgba(200,97,74,.05);pointer-events:none}
+.lm-inner{position:relative;z-index:1}
+.lm-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;
+  background:rgba(93,250,140,.1);border:1px solid rgba(93,250,140,.24);
+  border-radius:var(--r-f);font-size:.68rem;font-weight:700;
+  color:#6de893;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.lm-title{font-family:var(--serif);
+  font-size:clamp(1.7rem,6.5vw,2.4rem);color:#fff;line-height:1.22;margin-bottom:14px}
+.lm-desc{font-size:.87rem;color:rgba(255,255,255,.58);line-height:1.77;margin-bottom:24px}
+.lm-items{display:flex;flex-direction:column;gap:9px;margin-bottom:28px}
+.lm-item{display:flex;align-items:center;gap:10px;
+  font-size:.82rem;color:rgba(255,255,255,.7)}
+.lm-dot{width:22px;height:22px;border-radius:50%;
+  background:rgba(93,250,140,.14);color:#6de893;
+  font-size:.66rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lm-form{display:flex;flex-direction:column;gap:12px}
+.lm-input{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.12);
+  border-radius:var(--r-m);padding:14px 17px;color:#fff;font-family:var(--sans);
+  font-size:.88rem;outline:none;transition:all .25s var(--ease);width:100%}
+.lm-input::placeholder{color:rgba(255,255,255,.3)}
+.lm-input:focus{border-color:rgba(93,250,140,.38);background:rgba(255,255,255,.13)}
+.lm-cb-wrap{display:flex;gap:10px;align-items:flex-start}
+.lm-cb-wrap input[type=checkbox]{width:15px;height:15px;margin-top:2px;
+  flex-shrink:0;accent-color:var(--mist);cursor:pointer}
+.lm-cb-lbl{font-size:.7rem;color:rgba(255,255,255,.42);line-height:1.6}
+.lm-cb-lbl a{color:rgba(139,184,154,.75)}
+.lm-small{font-size:.65rem;color:rgba(255,255,255,.22);line-height:1.6;margin-top:10px}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FOODTRUCK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ft-sec{background:var(--white)}
+.ft-card{background:linear-gradient(160deg,#221006 0%,#3d1e0a 40%,#5a2e10 100%);
+  border-radius:var(--r-l);overflow:hidden;margin-top:28px}
+.ft-img{width:100%;height:176px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#3d1e0a 0%,#6a380e 40%,#c86520 70%,#e89030 100%);
+  display:flex;align-items:center;justify-content:center;font-size:3.2rem}
+.ft-img::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 55% at 50% 40%,rgba(255,190,80,.14) 0%,transparent 70%)}
+.ft-img-hint{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);
+  font-size:.58rem;color:rgba(255,255,255,.1);letter-spacing:.14em;
+  text-transform:uppercase;white-space:nowrap}
+.ft-body{padding:24px}
+.ft-badge{display:inline-block;background:rgba(255,180,40,.14);
+  border:1px solid rgba(255,180,40,.3);color:#ffbe38;
+  padding:4px 12px;border-radius:var(--r-f);font-size:.65rem;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.ft-title{font-family:var(--serif);font-size:1.55rem;color:#fff;margin-bottom:9px;line-height:1.25}
+.ft-desc{font-size:.83rem;color:rgba(255,255,255,.58);line-height:1.65;margin-bottom:17px}
+.ft-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+.ft-chip{background:rgba(255,255,255,.08);border-radius:var(--r-f);
+  padding:5px 11px;font-size:.74rem;color:rgba(255,255,255,.75)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BLOG / INSTAGRAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.blog-sec{background:var(--linen)}
+.blog-list{display:flex;flex-direction:column;gap:11px;margin-top:24px}
+.blog-item{background:var(--white);border-radius:var(--r-m);overflow:hidden;
+  display:flex;align-items:stretch;transition:all .25s var(--ease)}
+.blog-item:hover{transform:translateX(4px);box-shadow:var(--sh-sm)}
+.blog-thumb{width:78px;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;font-size:1.65rem;background:var(--dew)}
+.blog-info{padding:14px 16px}
+.blog-cat{font-size:.64rem;color:var(--sage);font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.blog-title{font-size:.84rem;font-weight:600;color:var(--ink);
+  line-height:1.4;margin-bottom:5px}
+.blog-date{font-size:.7rem;color:var(--inkGhost)}
+.ig-row{background:linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  border-radius:var(--r-l);padding:21px;display:flex;align-items:center;gap:16px;
+  margin-top:14px;cursor:pointer;transition:all .25s var(--ease)}
+.ig-row:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(220,39,67,.28)}
+.ig-icon{font-size:2.1rem;flex-shrink:0}
+.ig-t{font-size:.93rem;font-weight:700;color:#fff}
+.ig-s{font-size:.76rem;color:rgba(255,255,255,.7);margin-top:3px}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.contact-sec{background:var(--white)}
+.contact-card{background:var(--dew);border-radius:var(--r-l);padding:28px;margin-top:28px}
+.contact-head{display:flex;align-items:center;gap:13px;
+  padding-bottom:20px;border-bottom:1px solid var(--dewMid);margin-bottom:22px}
+.contact-avi{width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--mist),var(--sage));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.35rem;flex-shrink:0;box-shadow:var(--sh-sm)}
+.contact-nm{font-weight:700;font-size:.93rem;color:var(--ink)}
+.contact-sub{font-size:.76rem;color:var(--inkSoft);margin-top:2px}
+.c-form{display:flex;flex-direction:column;gap:12px}
+.f-inp{background:var(--white);border:1.5px solid transparent;
+  border-radius:var(--r-m);padding:13px 16px;font-family:var(--sans);
+  font-size:.87rem;color:var(--ink);outline:none;
+  transition:all .25s var(--ease);width:100%}
+.f-inp:focus{border-color:var(--mist);box-shadow:0 0 0 3px rgba(139,184,154,.18)}
+.f-inp::placeholder{color:var(--inkGhost)}
+textarea.f-inp{resize:vertical;min-height:94px}
+.f-cb-wrap{display:flex;gap:10px;align-items:flex-start}
+.f-cb-wrap input[type=checkbox]{width:15px;height:15px;margin-top:2px;
+  flex-shrink:0;accent-color:var(--sage);cursor:pointer}
+.f-cb-lbl{font-size:.72rem;color:var(--inkSoft);line-height:1.55}
+.f-cb-lbl a{color:var(--sage)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.footer{background:var(--forest);padding:48px 0 110px}
+@media(min-width:768px){.footer{padding-bottom:60px}}
+.f-logo{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:#fff;margin-bottom:9px}
+.f-logo sup{font-size:.52rem;vertical-align:super;opacity:.6;font-style:italic;font-weight:400}
+.f-tagline{font-size:.8rem;color:rgba(255,255,255,.44);line-height:1.7;margin-bottom:26px}
+.f-links{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}
+.f-link{font-size:.76rem;color:rgba(255,255,255,.44);
+  background:rgba(255,255,255,.06);padding:5px 13px;
+  border-radius:var(--r-f);transition:all .22s var(--ease)}
+.f-link:hover{color:#fff;background:rgba(255,255,255,.1)}
+.f-copy{font-size:.7rem;color:rgba(255,255,255,.24);line-height:1.7;
+  border-top:1px solid rgba(255,255,255,.07);padding-top:20px}
+.f-copy a{color:rgba(139,184,154,.55)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BOTTOM NAV (mobile only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(250,247,241,.93);backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+  border-top:1px solid rgba(63,114,84,.1);
+  padding:8px 4px;padding-bottom:max(8px,env(safe-area-inset-bottom));
+  display:flex;align-items:center;justify-content:space-around}
+@media(min-width:768px){.bnav{display:none}}
+.bn{display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:6px 12px;border-radius:var(--r-m);cursor:pointer;
+  transition:all .22s var(--ease);min-width:48px;
+  -webkit-tap-highlight-color:transparent}
+.bn-ico{font-size:1.15rem;line-height:1;color:var(--inkGhost);transition:color .22s}
+.bn-lbl{font-size:.56rem;font-weight:500;color:var(--inkGhost);transition:color .22s;letter-spacing:.02em}
+.bn.on .bn-ico,.bn.on .bn-lbl{color:var(--sage)}
+.bn-cta{width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sage),var(--forest));
+  display:flex;align-items:center;justify-content:center;font-size:1.25rem;
+  margin-top:-16px;box-shadow:0 4px 18px rgba(63,114,84,.45);
+  cursor:pointer;transition:all .25s var(--ease);flex-shrink:0}
+.bn-cta:active{transform:scale(.94)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   REVEAL ANIMATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.rv{opacity:0;transform:translateY(28px);
+  transition:opacity .65s cubic-bezier(.25,.1,.25,1),
+             transform .65s cubic-bezier(.25,.1,.25,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}
+.rv.d2{transition-delay:.2s}
+.rv.d3{transition-delay:.3s}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TOAST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.toast{position:fixed;bottom:96px;left:50%;
+  transform:translateX(-50%) translateY(16px);
+  background:var(--forest);color:#fff;padding:11px 22px;
+  border-radius:var(--r-f);font-size:.83rem;font-weight:500;
+  opacity:0;transition:all .3s var(--ease);z-index:200;
+  white-space:nowrap;box-shadow:var(--sh-md)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   UTILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}
+</style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="progress"></div>
+
+<!-- ╔══════════════════════════════════
+     NAV
+╚══════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo">Gesund·Lernen<sup>®</sup></a>
+  <div class="nav-right">
+    <a href="#seminar" class="npill">Seminar</a>
+    <a href="#kontakt" class="npill npill-cta">Anfragen</a>
+  </div>
+</nav>
+
+<!-- ╔══════════════════════════════════
+     HERO
+╚══════════════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-hint">📸 Hauptbild: Svenja Lehmann in Schwarzwald-Natur</div>
+
+  <div class="hero-stats">
+    <div class="hstat">
+      <div class="hstat-n">369€</div>
+      <div class="hstat-l">inkl. Vollverpflegung</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-n">12</div>
+      <div class="hstat-l">Plätze verfügbar</div>
+    </div>
+  </div>
+
+  <div class="hero-body rv">
+    <span class="hero-badge">
+      <span class="badge-dot"></span>
+      Nächstes Seminar · Oktober 2026
+    </span>
+    <h1>
+      Gesund &amp;<br>
+      <em>gelassen</em><br>
+      durch den<br>
+      Schulalltag.
+    </h1>
+    <p class="hero-sub">Resilienz-Wochenendseminar für Lehrkräfte im Schwarzwald — stärke dich von innen.</p>
+    <div class="hero-ctas">
+      <a href="#seminar" class="btn btn-ember">Jetzt anmelden ↓</a>
+      <a href="#svenja" class="btn btn-ghost-l">Über Svenja</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Scrollen
+  </div>
+</header>
+
+<!-- ╔══════════════════════════════════
+     ÜBER SVENJA
+╚══════════════════════════════════ -->
+<section class="about-sec" id="svenja">
+  <div class="wrap">
+    <p class="eyebrow rv">Über mich</p>
+    <h2 class="sec-title mt8 rv">Ich bin <em>Svenja.</em></h2>
+
+    <div class="about-card rv">
+      <div class="about-avi">
+        <!-- Ersetzen durch: <img src="svenja-portrait.jpg" alt="Svenja Lehmann"> -->
+        👩‍🏫
+      </div>
+      <div class="about-name">Svenja Lehmann</div>
+      <div class="about-role">Schulleiterin · Beratungslehrerin · Lerntherapeutin IFLW</div>
+      <p class="about-quote">„Manchmal muss man kurz stehenbleiben, um wieder den richtigen Weg zu sehen."</p>
+      <p class="about-text">Als Lehrerin, Beratungslehrerin, Schulleiterin und Mutter kenne ich den Spagat zwischen Beruf, Familie und Eigenfürsorge sehr genau. Ich habe erlebt, wie leicht man dabei selbst auf der Strecke bleibt – und ich habe gelernt, wie wertvoll es ist, innezuhalten und die eigenen Kraftquellen bewusst zu pflegen. Diese Erkenntnisse fließen in alle meine Angebote ein: praxisnah, alltagstauglich und speziell für Lehrkräfte.</p>
+      <div class="tags">
+        <span class="tag">🎓 Integr. Lerntherapeutin IFLW</span>
+        <span class="tag">🌿 Resilienztrainerin</span>
+        <span class="tag">🏫 Schulleiterin</span>
+        <span class="tag">📋 Beratungslehrerin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ╔══════════════════════════════════
+     SEMINAR
+╚══════════════════════════════════ -->
+<section class="seminar-sec" id="seminar">
+  <div class="wrap">
+    <p class="eyebrow rv">Wochenendseminar</p>
+    <h2 class="sec-title mt8 rv">„Stark verwurzelt –<br><em>kraftvoll wachsen."</em></h2>
+    <p class="sec-lead mt16 rv">Ein Wochenende fernab von Schulstress und To-do-Listen. Nur für dich, in der Stille des Schwarzwalds.</p>
+
+    <div class="ticket mt32 rv">
+      <!-- Bildfläche — ersetzen durch echtes Foto -->
+      <div class="ticket-img">
+        <div class="ticket-img-hint">
+          📸 Foto: Haus der Kirche Bad Herrenalb<br>oder Schwarzwald-Natur-Motiv
+        </div>
+      </div>
+
+      <div class="ticket-body">
+        <div class="ticket-badges">
+          <span class="tbadge tbadge-g">🌿 Exklusiv für Lehrkräfte</span>
+          <span class="tbadge tbadge-e">🏡 Schwarzwald</span>
+        </div>
+
+        <h3 class="ticket-title">Stark verwurzelt –<br><em>kraftvoll wachsen</em></h3>
+        <p class="ticket-sub">Freitagabend bis Sonntagmittag · inkl. 2 Übernachtungen</p>
+
+        <div class="mpills">
+          <span class="mpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            17.–19. Oktober 2026
+          </span>
+          <span class="mpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bad Herrenalb
+          </span>
+          <span class="mpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Max. 12 Personen
+          </span>
+        </div>
+
+        <!-- Countdown -->
+        <div class="cdown" id="cdownBlock">
+          <div class="cdown-eye">Noch bis zum Seminar</div>
+          <div class="cdown-row">
+            <div class="cdown-unit"><span class="cdown-num" id="cd-d">--</span><span class="cdown-lbl">Tage</span></div>
+            <span class="cdown-sep">:</span>
+            <div class="cdown-unit"><span class="cdown-num" id="cd-h">--</span><span class="cdown-lbl">Std.</span></div>
+            <span class="cdown-sep">:</span>
+            <div class="cdown-unit"><span class="cdown-num" id="cd-m">--</span><span class="cdown-lbl">Min.</span></div>
+            <span class="cdown-sep">:</span>
+            <div class="cdown-unit"><span class="cdown-num" id="cd-s">--</span><span class="cdown-lbl">Sek.</span></div>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="price-box">
+          <div class="price-eye">Teilnahmebeitrag</div>
+          <div class="price-main">369 €</div>
+          <div class="price-incl">inkl. 2 Übernachtungen · Vollverpflegung · Seminarunterlagen</div>
+          <div class="price-early">🌟 Frühbucherpreis bis 31.12.: nur 345 €</div>
+        </div>
+
+        <a href="#kontakt" class="btn btn-ember" style="width:100%;justify-content:center;">
+          Jetzt Platz sichern →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     BENEFITS
+╚══════════════════════════════════ -->
+<section class="ben-sec" id="benefits">
+  <div class="wrap">
+    <p class="eyebrow rv">Was dich erwartet</p>
+    <h2 class="sec-title mt8 rv">Deine <em>Highlights.</em></h2>
+
+    <div class="ben-grid">
+      <div class="bc rv d1">
+        <div class="bc-icon">🌲</div>
+        <div class="bc-t">Natur &amp; Achtsamkeit</div>
+        <div class="bc-d">Bewusstes Innehalten in der Schwarzwald-Natur. Neue Kraft schöpfen, ohne Ablenkung.</div>
+      </div>
+      <div class="bc rv d2">
+        <div class="bc-icon">🧠</div>
+        <div class="bc-t">Resilienz-Training</div>
+        <div class="bc-d">Praxisnahe Strategien für mehr Gelassenheit und Stabilität im Schulalltag.</div>
+      </div>
+      <div class="bc rv d1">
+        <div class="bc-icon">🤝</div>
+        <div class="bc-t">Kleine Gruppe</div>
+        <div class="bc-d">Intensiver Austausch mit Kolleginnen, die dich und deinen Alltag wirklich verstehen.</div>
+      </div>
+      <div class="bc rv d2">
+        <div class="bc-icon">⚡</div>
+        <div class="bc-t">Sofort anwendbar</div>
+        <div class="bc-d">Techniken, die du ab Montag direkt in deinen Schulalltag mitnehmen kannst.</div>
+      </div>
+      <div class="bc ben-wide rv">
+        <div class="bc-icon">🏡</div>
+        <div class="bc-t">Haus der Kirche, Bad Herrenalb</div>
+        <div class="bc-d">Ruhige Lage mitten im Schwarzwald. Kein WLAN-Druck, kein Schreibtisch – nur du und deine Erholung. Du gehst gestärkt, geerdet und mit neuer Energie in deinen Alltag zurück.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ╔══════════════════════════════════
+     PROGRAMM
+╚══════════════════════════════════ -->
+<section class="prog-sec" id="programm">
+  <div class="wrap">
+    <p class="eyebrow rv">Programm</p>
+    <h2 class="sec-title mt8 rv">Dein <em>Wochenende.</em></h2>
+
+    <div class="acc">
+      <div class="ai open rv">
+        <div class="ah" role="button" tabindex="0">
+          <div class="ai-day">Fr</div>
+          <span class="ai-label">Freitagabend – Ankommen &amp; Loslassen</span>
+          <div class="ai-tog">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10"/></svg>
+          </div>
+        </div>
+        <div class="ab">
+          <div class="ac">
+            <div class="ae">Herzliches Ankommen und gegenseitiges Kennenlernen</div>
+            <div class="ae">Gemeinsames Abendessen in entspannter Atmosphäre</div>
+            <div class="ae">Erstes Innehalten: Was bringst du mit – was kannst du loslassen?</div>
+            <div class="ae">Geführte Entspannungsübung zum Ankommen in der Stille</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai rv d1">
+        <div class="ah" role="button" tabindex="0">
+          <div class="ai-day">Sa</div>
+          <span class="ai-label">Samstag – Resilienz &amp; Naturerlebnisse</span>
+          <div class="ai-tog">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10"/></svg>
+          </div>
+        </div>
+        <div class="ab">
+          <div class="ac">
+            <div class="ae">Morgenmeditation &amp; achtsames Frühstück</div>
+            <div class="ae">Resilienz-Workshop: Stressmuster erkennen &amp; gezielt verändern</div>
+            <div class="ae">Achtsamer Spaziergang im Schwarzwald – Energie aus der Natur</div>
+            <div class="ae">Persönliche Kraftquellen entdecken &amp; aktivieren</div>
+            <div class="ae">Gemeinsames Abendessen &amp; freier Abend</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai rv d2">
+        <div class="ah" role="button" tabindex="0">
+          <div class="ai-day">So</div>
+          <span class="ai-label">Sonntagmittag – Stärke für den Alltag</span>
+          <div class="ai-tog">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10"/></svg>
+          </div>
+        </div>
+        <div class="ab">
+          <div class="ac">
+            <div class="ae">Morgenrunde: Reflexion und persönliche Erkenntnisse teilen</div>
+            <div class="ae">Sofort-Strategien für den Schulalltag ab Montag</div>
+            <div class="ae">Abschlusskreis &amp; gemeinsames Mittagessen</div>
+            <div class="ae">Du gehst gestärkt, geerdet und mit neuem Schwung nach Hause</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ╔══════════════════════════════════
+     TESTIMONIALS
+╚══════════════════════════════════ -->
+<section class="testi-sec" id="stimmen">
+  <div class="wrap">
+    <p class="eyebrow rv">Stimmen</p>
+    <h2 class="sec-title mt8 rv">Was andere <em>sagen.</em></h2>
+
+    <div class="testi-row">
+      <div class="tc rv d1">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-body">„Ein unglaublich wertvolles Wochenende. Ich bin mit ganz neuer Energie zurück in meine Klasse gegangen. Svenja schafft eine Atmosphäre, die einfach gut tut."</p>
+        <div class="tc-author">
+          <div class="tc-avi">ML</div>
+          <div>
+            <div class="tc-name">Monika L.</div>
+            <div class="tc-role">Grundschullehrerin, Baden-Württemberg</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc rv d2">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-body">„Endlich ein Angebot, das wirklich für uns Lehrkräfte gemacht ist. Praxisnah, herzlich und nachhaltig wirksam. Absolute Empfehlung an alle Kollegen!"</p>
+        <div class="tc-author">
+          <div class="tc-avi">TK</div>
+          <div>
+            <div class="tc-name">Thomas K.</div>
+            <div class="tc-role">Gymnasiallehrer, Freiburg im Breisgau</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     LERNTHERAPIE
+╚══════════════════════════════════ -->
+<section class="therapy-sec" id="therapie">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-ember rv">Lerntherapie</p>
+    <h2 class="sec-title mt8 rv">Wenn Lernen <em>zur Last wird.</em></h2>
+    <p class="sec-lead mt16 rv">Ich unterstütze Kinder und Jugendliche mit Lernschwierigkeiten – und ihre Eltern – dabei, neue Wege im Lernen zu finden.</p>
+
+    <div class="therapy-card rv">
+      <div class="therapy-head">
+        <div class="th-circle">📚</div>
+        <div>
+          <div class="th-eye">Lerntherapie für Kinder &amp; Jugendliche</div>
+          <div class="th-title">Individuelle Förderung<br>mit Herz und Methode.</div>
+        </div>
+      </div>
+      <div class="therapy-body">
+        <p class="t-intro">Lerntherapie ist keine Nachhilfe – sondern eine ganzheitliche Förderung, die Fachliches, Emotionales und Familiäres zusammendenkt. Mit fachlicher Kompetenz, viel Erfahrung und einem Blick auf das ganze Kind.</p>
+
+        <div style="font-size:.8rem;font-weight:700;color:var(--ink);margin-bottom:12px;">Wenn dein Kind …</div>
+        <div class="syms">
+          <div class="sym"><div class="sym-dot"></div><span class="sym-t">Lese-Rechtschreib-Schwäche (LRS / Legasthenie)</span></div>
+          <div class="sym"><div class="sym-dot"></div><span class="sym-t">Rechenschwäche (Dyskalkulie)</span></div>
+          <div class="sym"><div class="sym-dot"></div><span class="sym-t">Konzentrations- und Aufmerksamkeitsprobleme</span></div>
+          <div class="sym"><div class="sym-dot"></div><span class="sym-t">Schulfrust, Prüfungsangst, Selbstzweifel</span></div>
+          <div class="sym"><div class="sym-dot"></div><span class="sym-t">Hochsensibilität oder emotionale Überforderung</span></div>
+        </div>
+
+        <div class="t-parent">
+          <div class="t-parent-eye">💛 Für Eltern</div>
+          <p class="t-parent-txt">Im Gespräch finden Sie bei mir Raum, Fragen zu stellen und Entlastung zu bekommen. Sie machen sich Sorgen, möchten helfen – ich begleite auch Sie dabei, wieder klarer zu sehen. Denn auch Sie benötigen jemanden, der Sie stärkt.</p>
+        </div>
+
+        <a href="#kontakt" class="btn btn-ember-full">
+          Kostenloses Erstgespräch vereinbaren →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     LEAD MAGNET – 7 TIPPS
+╚══════════════════════════════════ -->
+<section class="lm-sec" id="tipps">
+  <div class="lm-d1"></div>
+  <div class="lm-d2"></div>
+  <div class="wrap">
+    <div class="lm-inner">
+      <span class="lm-badge rv">🌿 Kostenlos</span>
+      <h2 class="lm-title rv">7 Sofort-Tipps für<br>weniger Stress im<br>Lehreralltag</h2>
+      <p class="lm-desc rv">Als Lehrkraft bist du ständig gefordert – Korrekturen, Unterricht, Gespräche. Mit diesen 7 Tipps kannst du in kurzer Zeit Stress loslassen, dich erden und neue Energie tanken. Ideal für den Schulalltag, ohne großen Aufwand.</p>
+      <div class="lm-items rv">
+        <div class="lm-item"><div class="lm-dot">7</div>Praktische, sofort umsetzbare Strategien</div>
+        <div class="lm-item"><div class="lm-dot">✓</div>Speziell für den Lehreralltag entwickelt</div>
+        <div class="lm-item"><div class="lm-dot">✓</div>Kostenlos &amp; direkt in dein Postfach</div>
+      </div>
+      <form class="lm-form rv" onsubmit="handleLM(event)">
+        <input type="text" class="lm-input" name="firstname" placeholder="Dein Vorname">
+        <input type="email" class="lm-input" name="email" placeholder="Deine E-Mail-Adresse *" required>
+        <div class="lm-cb-wrap">
+          <input type="checkbox" id="lm-cb" required>
+          <label class="lm-cb-lbl" for="lm-cb">Ja, ich möchte regelmäßig Tipps und Inspirationen für meinen Lehreralltag per E-Mail erhalten. Abmeldung jederzeit möglich. <a href="#" onclick="return false">Datenschutz</a></label>
+        </div>
+        <button type="submit" class="btn btn-green" id="lm-btn">✉️ Jetzt kostenlos anfordern</button>
+      </form>
+      <p class="lm-small rv">Wir nutzen Mailchimp als Newsletter-Plattform. Mit Klick bestätigst du, dass deine Daten an Mailchimp übertragen werden.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     FOODTRUCK
+╚══════════════════════════════════ -->
+<section class="ft-sec" id="foodtruck">
+  <div class="wrap">
+    <p class="eyebrow rv">Neu ab 2026</p>
+    <h2 class="sec-title mt8 rv">Lehmanns <em>Grill &amp; Grün.</em></h2>
+    <p class="sec-lead mt16 rv">Frisch, regional, mit Liebe gegrillt — für dein Event in der Region Schwarzwald-Baar-Heuberg.</p>
+
+    <div class="ft-card rv">
+      <div class="ft-img">
+        🍖🌿
+        <div class="ft-img-hint">📸 Foodtruck-Foto / Grill &amp; Grün</div>
+      </div>
+      <div class="ft-body">
+        <span class="ft-badge">🔥 NEU AB 2026</span>
+        <h3 class="ft-title">Frisch. Regional.<br>Mit Liebe gegrillt.</h3>
+        <p class="ft-desc">Mobiler Foodtruck für Firmenfeste, Schulfeiern, Hochzeiten &amp; Märkte. Herzhaftes &amp; Vegetarisches aus der Region. Weil Gesundheit &amp; Genuss zusammengehören.</p>
+        <div class="ft-chips">
+          <span class="ft-chip">🥩 Grill-Spezialitäten</span>
+          <span class="ft-chip">🥗 Salate &amp; Bowls</span>
+          <span class="ft-chip">🥔 Kartoffelofen</span>
+          <span class="ft-chip">🌱 Vegan &amp; Veggie</span>
+          <span class="ft-chip">🫙 Hausgemachte Saucen</span>
+          <span class="ft-chip">♻️ Nachhaltiges Geschirr</span>
+        </div>
+        <a href="#kontakt" class="btn btn-amber">Event anfragen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ╔══════════════════════════════════
+     BLOG / INSTAGRAM
+╚══════════════════════════════════ -->
+<section class="blog-sec" id="blog">
+  <div class="wrap">
+    <p class="eyebrow rv">Blog &amp; Inspiration</p>
+    <h2 class="sec-title mt8 rv">Impulse für <em>deinen Alltag.</em></h2>
+
+    <div class="blog-list">
+      <div class="blog-item rv d1">
+        <div class="blog-thumb">🌿</div>
+        <div class="blog-info">
+          <div class="blog-cat">Resilienz</div>
+          <div class="blog-title">5 Minuten Achtsamkeit: So startest du besser in den Schultag</div>
+          <div class="blog-date">Bald verfügbar</div>
+        </div>
+      </div>
+      <div class="blog-item rv d2">
+        <div class="blog-thumb">💪</div>
+        <div class="blog-info">
+          <div class="blog-cat">Stressbewältigung</div>
+          <div class="blog-title">Wenn Elterngespräche nervenaufreibend werden – und was wirklich hilft</div>
+          <div class="blog-date">Bald verfügbar</div>
+        </div>
+      </div>
+      <div class="blog-item rv d3">
+        <div class="blog-thumb">📚</div>
+        <div class="blog-info">
+          <div class="blog-cat">Lerntherapie</div>
+          <div class="blog-title">LRS erkennen: Die wichtigsten Zeichen &amp; was Eltern tun können</div>
+          <div class="blog-date">Bald verfügbar</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://instagram.com" target="_blank" rel="noopener" class="ig-row rv">
+      <div class="ig-icon">📸</div>
+      <div>
+        <div class="ig-t">Folg mir auf Instagram</div>
+        <div class="ig-s">Tägliche Impulse für mehr Gelassenheit im Lehreralltag · @gesund.lernen</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     KONTAKT
+╚══════════════════════════════════ -->
+<section class="contact-sec" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow rv">Kontakt</p>
+    <h2 class="sec-title mt8 rv">Lass uns <em>sprechen.</em></h2>
+    <p class="sec-lead mt16 rv">Fragen zum Seminar, zur Lerntherapie oder zum Foodtruck? Ich freue mich auf deine Nachricht.</p>
+
+    <div class="contact-card rv">
+      <div class="contact-head">
+        <div class="contact-avi">🌿</div>
+        <div>
+          <div class="contact-nm">Svenja Lehmann</div>
+          <div class="contact-sub">Gesund-Lernen · Region Schwarzwald-Baar-Heuberg</div>
+        </div>
+      </div>
+
+      <form class="c-form" onsubmit="handleContact(event)">
+        <input type="text" class="f-inp" name="name" placeholder="Dein Name *" required>
+        <input type="email" class="f-inp" name="email" placeholder="E-Mail-Adresse *" required>
+        <select class="f-inp" name="topic">
+          <option value="">Thema wählen …</option>
+          <option>Seminar – Stark verwurzelt</option>
+          <option>Lerntherapie für mein Kind</option>
+          <option>Foodtruck – Lehmanns Grill &amp; Grün</option>
+          <option>Newsletter – 7 Sofort-Tipps</option>
+          <option>Sonstiges</option>
+        </select>
+        <textarea class="f-inp" name="message" placeholder="Deine Nachricht …" rows="4"></textarea>
+        <div class="f-cb-wrap">
+          <input type="checkbox" id="f-cb" required>
+          <label class="f-cb-lbl" for="f-cb">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#">Datenschutzerklärung</a> zu.</label>
+        </div>
+        <button type="submit" class="btn btn-sage-full" id="c-btn">Nachricht senden ↗</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════
+     FOOTER
+╚══════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-logo">Gesund·Lernen<sup>®</sup></div>
+    <p class="f-tagline">
+      Resilienz &amp; Gesundheit im Lehrerleben · Lerntherapie für Kinder &amp; Jugendliche<br>
+      Svenja Lehmann · Region Schwarzwald-Baar-Heuberg
+    </p>
+    <div class="f-links">
+      <a href="#" class="f-link">Impressum</a>
+      <a href="#" class="f-link">Datenschutz</a>
+      <a href="#" class="f-link">AGB</a>
+      <a href="#seminar" class="f-link">Seminar</a>
+      <a href="#therapie" class="f-link">Lerntherapie</a>
+      <a href="#foodtruck" class="f-link">Foodtruck</a>
+      <a href="#tipps" class="f-link">Gratis-Tipps</a>
+    </div>
+    <div class="f-copy">
+      © 2026 gesund-lernen.de · Svenja Lehmann<br>
+      Integr. Lerntherapeutin (IFLW) · Prüfnr. <a href="https://www.iflw.de/zertifikat/suchen.php" target="_blank" rel="noopener">LT-345-PR-20535</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ╔══════════════════════════════════
+     BOTTOM NAV (mobile)
+╚══════════════════════════════════ -->
+<nav class="bnav" id="bnav">
+  <div class="bn on" data-sec="top" onclick="go('#top')">
+    <span class="bn-ico">🏠</span>
+    <span class="bn-lbl">Home</span>
+  </div>
+  <div class="bn" data-sec="seminar" onclick="go('#seminar')">
+    <span class="bn-ico">🌿</span>
+    <span class="bn-lbl">Seminar</span>
+  </div>
+  <div class="bn-cta" onclick="go('#kontakt')" title="Kontakt">✉️</div>
+  <div class="bn" data-sec="therapie" onclick="go('#therapie')">
+    <span class="bn-ico">📚</span>
+    <span class="bn-lbl">Therapie</span>
+  </div>
+  <div class="bn" data-sec="tipps" onclick="go('#tipps')">
+    <span class="bn-ico">⚡</span>
+    <span class="bn-lbl">Tipps</span>
+  </div>
+</nav>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- ╔══════════════════════════════════
+     JAVASCRIPT
+╚══════════════════════════════════ -->
+<script>
+(function(){
+  'use strict';
+
+  /* ── Nav scroll ── */
+  var nav = document.getElementById('nav');
+  var bar = document.getElementById('progress');
+
+  function onScroll(){
+    var sy = window.scrollY;
+    nav.classList.toggle('solid', sy > 55);
+
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (sy/total)*100 : 0) + '%';
+
+    updateBNav();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ── Parallax hero bg ── */
+  var heroBg = document.getElementById('heroBg');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY < window.innerHeight * 1.5)
+      heroBg.style.transform = 'translateY('+(window.scrollY*.32)+'px)';
+  }, {passive:true});
+
+  /* ── Smooth nav ── */
+  window.go = function(sel){
+    var el = document.querySelector(sel);
+    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+
+  /* ── Reveal ── */
+  var rvEls = document.querySelectorAll('.rv');
+  var ro = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -28px 0px'});
+  rvEls.forEach(function(el){ro.observe(el);});
+  // Hero fires immediately
+  var h = document.querySelector('.hero-body');
+  if(h) h.classList.add('in');
+
+  /* ── Accordion ── */
+  document.querySelectorAll('.ah').forEach(function(hd){
+    hd.addEventListener('click', function(){
+      var item = this.closest('.ai');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.ai').forEach(function(i){i.classList.remove('open');});
+      if(!isOpen) item.classList.add('open');
+    });
+    hd.addEventListener('keydown', function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
+    });
+  });
+
+  /* ── Countdown ── */
+  var target = new Date('2026-10-17T17:00:00');
+  function tick(){
+    var now = new Date();
+    var diff = target - now;
+    if(diff <= 0){
+      var b = document.getElementById('cdownBlock');
+      if(b) b.innerHTML='<div class="cdown-eye" style="color:#6de893">Nächster Termin – jetzt vormerken!</div>';
+      return;
+    }
+    var d = Math.floor(diff/864e5);
+    var h = Math.floor((diff%864e5)/36e5);
+    var m = Math.floor((diff%36e5)/6e4);
+    var s = Math.floor((diff%6e4)/1e3);
+    var p = function(n){return String(n).padStart(2,'0');};
+    var els = {d:'cd-d',h:'cd-h',m:'cd-m',s:'cd-s'};
+    var vals = {d:d,h:h,m:m,s:s};
+    Object.keys(els).forEach(function(k){
+      var el = document.getElementById(els[k]);
+      if(el) el.textContent = p(vals[k]);
+    });
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ── Bottom nav active ── */
+  var sectionMap = [
+    {id:'top',   idx:0},
+    {id:'seminar',idx:1},
+    {id:'therapie',idx:3},
+    {id:'tipps', idx:4},
+  ];
+  var bnItems = document.querySelectorAll('.bn');
+  function updateBNav(){
+    var sy = window.scrollY + window.innerHeight/2;
+    var active = 0;
+    sectionMap.forEach(function(s){
+      var el = document.getElementById(s.id);
+      if(el && el.offsetTop <= sy) active = s.idx;
+    });
+    bnItems.forEach(function(item,i){
+      item.classList.toggle('on', i===active);
+    });
+  }
+
+  /* ── Toast ── */
+  function toast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function(){t.classList.remove('show');}, 3200);
+  }
+
+  /* ── Lead Magnet form ── */
+  window.handleLM = function(e){
+    e.preventDefault();
+    var btn = document.getElementById('lm-btn');
+    btn.textContent = '✅ Erfolgreich angemeldet!';
+    btn.style.background = 'linear-gradient(135deg,#3ec85a,#1d9a3a)';
+    btn.disabled = true;
+    e.target.reset();
+    toast('✅ Deine 7 Tipps sind unterwegs!');
+  };
+
+  /* ── Contact form ── */
+  window.handleContact = function(e){
+    e.preventDefault();
+    var btn = document.getElementById('c-btn');
+    var orig = btn.textContent;
+    btn.textContent = '✅ Nachricht gesendet!';
+    btn.disabled = true;
+    toast('✅ Nachricht gesendet! Ich melde mich zeitnah.');
+    setTimeout(function(){
+      btn.textContent = orig;
+      btn.disabled = false;
+      e.target.reset();
+    }, 5000);
+  };
+
+})();
+</script>
+</body>
+</html>
